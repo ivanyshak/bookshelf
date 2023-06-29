@@ -11,12 +11,12 @@ class Book < ApplicationRecord
   scope :by_genre, ->(query) { where(genre: query) if query.present? }
 
   enum genre: {
-    classics: 'Classics',
-    historical: 'Historical',
-    action: 'Action',
-    horror: 'Horror',
-    fantasy: 'Fantasy',
-    other: 'Other'
+    classics: 0,
+    historical: 1,
+    action: 2,
+    horror: 3,
+    fantasy: 4,
+    other: 5
   }
 
   def self.search(params)
