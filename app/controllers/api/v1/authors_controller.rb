@@ -7,7 +7,7 @@ module Api
 
       # GET /authors
       def index
-        authors = Author.all
+        authors = Author.search(params).paginate(page: params[:page], per: params[:per])
         render json: AuthorSerializer.new(authors).serialized_json
       end
 

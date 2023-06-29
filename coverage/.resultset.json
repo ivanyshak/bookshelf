@@ -307,6 +307,24 @@
           null
         ]
       },
+      "/Users/ivanyshak/workspace/bookshelf/config/initializers/kaminari_config.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ivanyshak/workspace/bookshelf/config/initializers/mime_types.rb": {
         "lines": [
           null,
@@ -550,6 +568,19 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -559,6 +590,19 @@
           null,
           1,
           1,
+          null,
+          1,
+          null,
+          3,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
           null
         ]
       },
@@ -582,12 +626,28 @@
           1,
           null,
           1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          1,
           null,
           null,
           null,
           null,
           null,
           null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ]
@@ -614,6 +674,6 @@
         ]
       }
     },
-    "timestamp": 1687333076
+    "timestamp": 1688067303
   }
 }

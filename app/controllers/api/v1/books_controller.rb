@@ -6,7 +6,7 @@ module Api
       before_action :set_book, only: %i[show update destroy]
 
       def index
-        books = Book.all
+        books = Book.search(params).paginate(page: params[:page], per: params[:per])
         render json: BookSerializer.new(books).serialized_json
       end
 
