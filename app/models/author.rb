@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Author < ApplicationRecord
-  has_many :books, dependent: :nullify
+  has_many :book_authors, dependent: :nullify
+  has_many :books, through: :book_authors
   validates :first_name, :last_name, presence: true
 
   scope :by_query, lambda { |query|

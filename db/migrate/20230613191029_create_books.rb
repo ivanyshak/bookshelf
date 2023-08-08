@@ -6,7 +6,6 @@ class CreateBooks < ActiveRecord::Migration[6.1]
       t.string :title
       t.text :description
       t.integer :genre, default: 0
-      t.references :author, null: false, foreign_key: true, index: true
 
       t.timestamps
     end

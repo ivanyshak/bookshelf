@@ -8,4 +8,10 @@ describe Api::V1::BooksController, type: :controller do
 
     it { should have_http_status(:success) }
   end
+
+  describe 'GET #show' do
+    subject { get :show }
+
+    it { should have_http_status(:success) }
+  end
 end
