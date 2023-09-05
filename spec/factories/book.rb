@@ -4,6 +4,5 @@ FactoryBot.define do
   factory :book do
     title { 'Test title' }
     description { 'Description' }
-    genre { 'classics' }
   end
 end

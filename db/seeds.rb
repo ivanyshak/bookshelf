@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+fantasy = Genre.find_or_create_by(name: 'fantasy')
+
 rowling = Author.find_or_create_by(
   first_name: 'Joanne',
   last_name: 'Rowling',
@@ -18,7 +20,6 @@ potter = Book.create!(
   {
     title: 'Harry Potter',
     description: 'Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling.',
-    genre: 4
   }
 )
 
@@ -26,9 +27,11 @@ it = Book.create!(
   {
     title: 'IT',
     description: 'It is a 1986 horror novel by American author Stephen King.',
-    genre: 4
   }
 )
 
 potter.authors << rowling
+potter.genres << fantasy
+
 it.authors << king
+it.genres << fantasy

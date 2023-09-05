@@ -3,22 +3,15 @@
 class Book < ApplicationRecord
   has_many :book_authors, dependent: :nullify
   has_many :authors, through: :book_authors
+  has_many :book_genres, dependent: :nullify
+  has_many :genres, through: :book_genres
   validates :title, presence: true
 
   scope :by_query, lambda { |query|
     where(query_search_sql, query) if query.present?
   }
 
-  scope :by_genre, ->(query) { where(genre: query) if query.present? }
-
-  enum genre: {
-    classics: 0,
-    historical: 1,
-    action: 2,
-    horror: 3,
-    fantasy: 4,
-    other: 5
-  }
+  scope :by_genre, ->(query) { joins(:genres).where(genres: { name: query }) if query.present? }
 
   def self.search(params)
     super(params)
